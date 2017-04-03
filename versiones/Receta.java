@@ -71,7 +71,7 @@ public class Receta {
 	@Override
 	public String toString() {
 		String cadena = "Receta: " + nombre.toUpperCase();
-		cadena += "\n\nIngredientes  para " + personas + "\n";
+		cadena += "\n\nIngredientes para " + personas + "\n";
 		if (ingredientes != null) {
 			for (Ingrediente ing : ingredientes) {
 				cadena += ing.toString() + "\n";
@@ -91,7 +91,19 @@ public class Receta {
 		}
 		return cadena;
 	}
-
+	public Receta recetaPara(int personas) {
+		Receta nueva = new Receta(this.getNombre());
+		nueva.setAutor(this.getAutor());
+		nueva.setPersonas(personas);
+		nueva.setPreparacion(this.getPreparacion());
+		ArrayList<Ingrediente> ing = this.getIngredientes();
+		double factor = personas/this.getPersonas();
+		for(Ingrediente i:ing) {
+			i.setCantidad((float) (i.getCantidad()*factor));
+		}
+		nueva.setIngredientes(ing);
+		return nueva;
+	}
 	public static void main(String[] args) {
 		Receta r = new Receta("tortilla");
 		r.addIngrediente(new Ingrediente(4, "unidades", "huevos"));
@@ -102,5 +114,7 @@ public class Receta {
 		r.addPreparacion("Incorporar los huevos a las patatas ya fritas");
 		r.addPreparacion("Dar la vuelta a la tortilla");
 		System.out.println(r);
+		Receta r8 = r.recetaPara(8);
+		System.out.println(r8);
 	}
 }
