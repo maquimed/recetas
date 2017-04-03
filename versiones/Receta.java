@@ -7,6 +7,8 @@ public class Receta {
 	private String nombre;
 	private ArrayList<Ingrediente> ingredientes;
 	private ArrayList<String> preparacion;
+	private int personas;
+	private String autor;
 
 	public Receta(String nombre) {
 		this.nombre = nombre;
@@ -46,6 +48,26 @@ public class Receta {
 	}
 
 
+	public int getPersonas() {
+		return personas;
+	}
+
+
+	public void setPersonas(int personas) {
+		this.personas = personas;
+	}
+
+
+	public String getAutor() {
+		return autor;
+	}
+
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+
 	@Override
 	public String toString() {
 		String cadena = "Receta:" + nombre.toUpperCase();
@@ -60,5 +82,5 @@ public class Receta {
 		}
 		return cadena;
 	}
-	
+
 }
