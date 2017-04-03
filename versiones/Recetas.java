@@ -1,13 +1,15 @@
 package versiones;
 
+import java.util.ArrayList;
+
 public class Recetas {
 	private String nombre;
 	private String ingredientes;
-	private String preparacion;
+	private ArrayList<String> preparacion;
 	public Recetas(String nombre) {
 		this.nombre = nombre;
 	}
-	public Recetas(String nombre, String ingredientes, String preparacion) {
+	public Recetas(String nombre, String ingredientes, ArrayList<String> preparacion) {
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
 		this.preparacion = preparacion;
@@ -24,10 +26,10 @@ public class Recetas {
 	public void setIngredientes(String ingredientes) {
 		this.ingredientes = ingredientes;
 	}
-	public String getPreparacion() {
+	public ArrayList<String> getPreparacion() {
 		return preparacion;
 	}
-	public void setPreparacion(String preparacion) {
+	public void setPreparacion(ArrayList<String> preparacion) {
 		this.preparacion = preparacion;
 	}
 	
