@@ -3,9 +3,11 @@ package versiones;
 import java.util.ArrayList;
 
 public class Recetas {
+	
 	private String nombre;
-	private String ingredientes;
+	private ArrayList<Ingrediente> ingredientes;
 	private ArrayList<String> preparacion;
+
 	public Recetas(String nombre) {
 		this.nombre = nombre;
 	}
@@ -16,10 +18,10 @@ public class Recetas {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getIngredientes() {
+	public ArrayList<Ingrediente> getIngredientes() {
 		return ingredientes;
 	}
-	public void setIngredientes(String ingredientes) {
+	public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
 		this.ingredientes = ingredientes;
 	}
 	public ArrayList<String> getPreparacion() {
