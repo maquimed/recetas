@@ -9,11 +9,7 @@ public class Recetas {
 	public Recetas(String nombre) {
 		this.nombre = nombre;
 	}
-	public Recetas(String nombre, String ingredientes, ArrayList<String> preparacion) {
-		this.nombre = nombre;
-		this.ingredientes = ingredientes;
-		this.preparacion = preparacion;
-	}
+
 	public String getNombre() {
 		return nombre;
 	}
