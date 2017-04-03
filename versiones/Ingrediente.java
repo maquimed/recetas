@@ -33,7 +33,7 @@ public class Ingrediente {
 	}
 	
 	public static void main(String[] args) {
-		Ingrediente i = new Ingrediente(3, "kg", "tomates");
+		Ingrediente i = new Ingrediente(3.2f, "kg", "tomates");
 		System.out.println(i.toString());
 	}
 }
