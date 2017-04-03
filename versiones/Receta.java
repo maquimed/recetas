@@ -2,18 +2,18 @@ package versiones;
 
 import java.util.ArrayList;
 
-public class Recetas {
+public class Receta {
 	
 	private String nombre;
 	private ArrayList<Ingrediente> ingredientes;
 	private ArrayList<String> preparacion;
 
-	public Recetas(String nombre) {
+	public Receta(String nombre) {
 		this.nombre = nombre;
 	}
 	
 	
-	public Recetas(String nombre, ArrayList<Ingrediente> ingredientes, ArrayList<String> preparacion) {
+	public Receta(String nombre, ArrayList<Ingrediente> ingredientes, ArrayList<String> preparacion) {
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
 		this.preparacion = preparacion;
