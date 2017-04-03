@@ -44,4 +44,21 @@ public class Receta {
 	public void addPreparacion(String preparacion) {
 		this.preparacion.add(preparacion);
 	}
+
+
+	@Override
+	public String toString() {
+		String cadena = "Receta:" + nombre.toUpperCase();
+		cadena += "\n, Ingredientes \n";
+		for(Ingrediente ing : ingredientes) {
+			cadena += ing.toString() + "\n";
+		}
+		cadena += "\n Preparación \n";
+		for (int i = 0; i<preparacion.size(); i++) {
+			cadena += "Paso " + i + ": " + preparacion.get(i) + "\n";
+			
+		}
+		return cadena;
+	}
+	
 }
